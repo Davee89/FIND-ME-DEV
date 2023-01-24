@@ -11,8 +11,10 @@ const Modal = () => {
 			<Overlay />
 			<ProjectContainer>
 				<Sidebar />
-				<InputArea />
-				<Nav />
+				<div>
+					<InputArea />
+					<Nav />
+				</div>
 			</ProjectContainer>
 		</div>
 	);
