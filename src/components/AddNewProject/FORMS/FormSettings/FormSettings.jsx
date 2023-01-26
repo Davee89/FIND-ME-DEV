@@ -9,7 +9,7 @@ const FormSettings = () => {
 
 	return (
 		<form>
-			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-10 md:mb-16">Set main settings</h2>
+			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-8">Set main settings</h2>
 			<div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:items-start md:mb-8">
 				<div className="flex flex-col items-center gap-2 ">
 					<label htmlFor="DatePicker" className="md:text-center">

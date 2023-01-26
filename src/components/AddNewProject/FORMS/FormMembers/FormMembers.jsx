@@ -8,9 +8,7 @@ import NewMember from "../../../NewMember/NewMember";
 const FormMembers = () => {
 	return (
 		<form>
-			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-10 md:mb-16">
-				Here will be adding new members area!{" "}
-			</h2>
+			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-8">Here will be adding new members area! </h2>
 			<div>
 				<SelectedInputAdd
 					label="Add new role"
@@ -18,8 +16,10 @@ const FormMembers = () => {
 				/>
 			</div>
 			<div>
-				<h3>Your team:</h3>
-				<div className="p-4 border flex gap-4 flex-col shadow-inner bg-green-50 max-h-[235px]">
+				<h3 className="text-gray-400 tracking-widest">Your team:</h3>
+				<div className=" flex flex-col max-h-[235px]">
+					<NewMember />
+					<NewMember />
 					<NewMember />
 				</div>
 			</div>

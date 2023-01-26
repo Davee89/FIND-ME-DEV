@@ -4,9 +4,7 @@ import SelectedInput from "../../../UI/SelectedInput/SelectedInput";
 const FormStack = () => {
 	return (
 		<form>
-			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-10 md:mb-16">
-				Select preffered stack and tools
-			</h2>
+			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-8 ">Select preffered stack and tools</h2>
 			<SelectedInput
 				label="Programming language"
 				option={{ one: "-------", two: "Javascript/Typescript", three: "Python" }}
