@@ -5,6 +5,9 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				logo: "url('/public/background.webp')",
+				add: "url('/public/add.png')",
+				addHoover: "url('/public/add-hoover.png')",
+				remove: "url('/public/remove.png')",
 			},
 		},
 	},

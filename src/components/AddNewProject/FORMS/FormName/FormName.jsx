@@ -8,7 +8,7 @@ const FormName = () => {
 			<Input label="Name your project:" />
 
 			<SelectedInput
-				name="Select project type"
+				label="Select project type"
 				option={{ one: "--------------", two: "Frontend", three: "Backend", four: "Fullstack", five: "Other" }}
 			/>
 
