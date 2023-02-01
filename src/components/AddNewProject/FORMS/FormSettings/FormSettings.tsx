@@ -1,11 +1,10 @@
-import React from "react";
 import DatePicker from "react-date-picker";
 import { useState } from "react";
 import Input from "../../../UI/Input/Input";
 import SelectedInput from "../../../UI/SelectedInput/SelectedInput";
 
 const FormSettings = () => {
-	const [value, onChange] = useState("");
+	const [value, onChange] = useState<Date | null>(null);
 
 	return (
 		<form>
@@ -28,6 +27,8 @@ const FormSettings = () => {
 					classname={`self-center text-center h-10 rounded-none w-40`}
 					label="Weekly hours required"
 					type="number"
+					name="Weekly hours required"
+					value={""}
 					min={0}
 					max={168}
 				/>
@@ -35,7 +36,7 @@ const FormSettings = () => {
 			<SelectedInput
 				classname={`w-40 md:w-auto self-center md:self-auto `}
 				label="Project level"
-				option={{ one: "------", two: "Junior", three: "Mid", four: "Senior" }}
+				options={["------", "Junior", "Mid", "Senior"]}
 			/>
 		</form>
 	);

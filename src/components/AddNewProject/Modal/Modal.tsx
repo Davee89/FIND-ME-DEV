@@ -1,4 +1,3 @@
-import React from "react";
 import Overlay from "../Overlay/Overlay";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import Sidebar from "../Sidebar/Sidebar";

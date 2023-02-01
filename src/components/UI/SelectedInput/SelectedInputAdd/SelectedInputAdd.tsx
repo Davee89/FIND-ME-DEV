@@ -1,6 +1,11 @@
-import React from "react";
+type selectedInputProps = {
+	options: string[];
+	label: string;
+	classname?: string;
+	button?: boolean;
+};
 
-const SelectedInputAdd = ({ option, label, classname, button }) => {
+const SelectedInputAdd = ({ options, label, classname, button }: selectedInputProps) => {
 	return (
 		<div className="mb-6 flex flex-col">
 			<label className="text-center mb-2" htmlFor="category">
@@ -8,11 +13,9 @@ const SelectedInputAdd = ({ option, label, classname, button }) => {
 			</label>
 			<div className="flex justify-between  ">
 				<select className={` ${classname} shadow-md text-center border rounded-lg p-2 w-52 md:w-[365px] `} name="category">
-					<option value={option.one}>{option.one}</option>
-					<option value={option.two}>{option.two}</option>
-					<option value={option.three}>{option.three}</option>
-					{option.four && <option value={option.four}>{option.four}</option>}
-					{option.five && <option value={option.five}>{option.five}</option>}
+					{options.map(option => (
+						<option value={option}>{option}</option>
+					))}
 				</select>
 				<button className="w-10 h-10 border shadow-md rounded-lg bg-add bg-no-repeat bg-center hover:bg-addHoover hover:bg-slate-200"></button>
 			</div>

@@ -1,6 +1,4 @@
-import React from "react";
-
-const SidebarStep = ({ count, name }) => {
+const SidebarStep = ({ count, name }: { count: number; name: string }) => {
 	return (
 		<div className="flex gap-2 items-center justify-center ">
 			<button className="w-[35px] h-[35px] rounded-full bg-transparent border-2 border-white text-center font-extrabold text-yellow-500 md:w-[50px] md:h-[50px]">

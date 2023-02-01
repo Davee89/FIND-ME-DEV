@@ -1,5 +1,3 @@
-import React from "react";
-
 const InputImage = () => {
 	return (
 		<div className="relative h-[32px] w-[32px] border rounded-full ">
