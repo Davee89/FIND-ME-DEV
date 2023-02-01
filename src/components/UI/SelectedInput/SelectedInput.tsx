@@ -12,8 +12,10 @@ const SelectedInput = ({ options, label, classname, button }: selectedInputProps
 				{label}
 			</label>
 			<select className={` ${classname} shadow-md text-center border rounded-lg p-2  `} name="category">
-				{options.map(option => (
-					<option value={option}>{option}</option>
+				{options.map((option, i) => (
+					<option key={i} value={option}>
+						{option}
+					</option>
 				))}
 			</select>
 		</div>

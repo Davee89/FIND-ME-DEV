@@ -13,8 +13,10 @@ const SelectedInputAdd = ({ options, label, classname, button }: selectedInputPr
 			</label>
 			<div className="flex justify-between  ">
 				<select className={` ${classname} shadow-md text-center border rounded-lg p-2 w-52 md:w-[365px] `} name="category">
-					{options.map(option => (
-						<option value={option}>{option}</option>
+					{options.map((option, i) => (
+						<option key={i} value={option}>
+							{option}
+						</option>
 					))}
 				</select>
 				<button className="w-10 h-10 border shadow-md rounded-lg bg-add bg-no-repeat bg-center hover:bg-addHoover hover:bg-slate-200"></button>

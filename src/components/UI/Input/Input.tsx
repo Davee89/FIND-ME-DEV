@@ -6,9 +6,10 @@ type inputProps = {
 	classname?: string;
 	min?: number;
 	max?: number;
+	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
 
-const Input = ({ name, type, value, label, classname, min, max }: inputProps) => {
+const Input = ({ name, type, value, label, classname, min, max, onChange }: inputProps) => {
 	return (
 		<div className="mb-6 flex flex-col ">
 			<label className="text-center mb-2" htmlFor={name}>
@@ -21,6 +22,7 @@ const Input = ({ name, type, value, label, classname, min, max }: inputProps) =>
 				type={type}
 				min={min}
 				max={max}
+				onChange={onChange}
 			/>
 		</div>
 	);
