@@ -41,6 +41,29 @@ const FormMembers = ({
 		});
 	};
 
+	const removeMember = (role: string | null) => {
+		setProjectData(prevData => {
+			const selectedMember = prevData.team.find(member => member.name === role);
+			if (selectedMember) {
+				if (selectedMember.amount && selectedMember.amount !== 1) {
+					const updatedTeam = prevData.team.map(member => {
+						if (member.name === role) {
+							return {
+								...member,
+								amount: member.amount ? member.amount - 1 : member.amount,
+							};
+						}
+						return member;
+					});
+					return { ...prevData, team: updatedTeam };
+				} else {
+					const updatedTeam = prevData.team.filter(member => member.name !== role);
+					return { ...prevData, team: updatedTeam };
+				}
+			} else return { ...prevData };
+		});
+	};
+
 	const setMemberToAdd = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setNewMember({ name: e.target.value });
 	};
@@ -62,7 +85,15 @@ const FormMembers = ({
 				<h3 className="text-gray-400 tracking-widest">Your team:</h3>
 				<div className=" flex flex-col max-h-[235px]">
 					{team.map((role, i) => (
-						<NewMember key={i} role={role.name} amount={role.amount} />
+						<NewMember
+							key={i}
+							role={role.name}
+							amount={role.amount}
+							onClick={(e: React.MouseEvent<HTMLElement>) => {
+								e.preventDefault();
+								removeMember(role.name);
+							}}
+						/>
 					))}
 				</div>
 			</div>
