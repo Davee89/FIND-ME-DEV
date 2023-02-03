@@ -3,15 +3,14 @@ import NewMember from "../../../NewMember/NewMember";
 import { Member, Project } from "../../Modal/Modal";
 import { useState } from "react";
 
-const FormMembers = ({
-	team,
-	setProjectData,
-}: {
+type MembersProps = {
 	team: Member[];
 	setProjectData: React.Dispatch<React.SetStateAction<Project>>;
-}) => {
+};
+
+const FormMembers = ({ team, setProjectData }: MembersProps) => {
 	const [newMember, setNewMember] = useState<Member>({
-		name: "",
+		name: "Frontend Dev",
 		amount: null,
 	});
 

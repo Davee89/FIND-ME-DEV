@@ -54,7 +54,7 @@ const Modal = () => {
 				<Sidebar page={pageNumber} />
 				<div>
 					<InputArea page={pageNumber} project={projectData} onChange={projectFormHandler} setProjectData={setProjectData} />
-					<Nav page={pageNumber} setPage={setPageNumber} />
+					<Nav page={pageNumber} setPage={setPageNumber} projectData={projectData} />
 				</div>
 			</ProjectContainer>
 		</div>

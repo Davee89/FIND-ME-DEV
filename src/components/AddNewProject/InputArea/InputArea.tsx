@@ -16,7 +16,7 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 		switch (page) {
 			case 1:
 				return <FormName name={project.name} type={project.type} description={project.description} onChange={onChange} />;
-				break;
+
 			case 2:
 				return (
 					<FormStack
@@ -26,7 +26,7 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 						onChange={onChange}
 					/>
 				);
-				break;
+
 			case 3:
 				return (
 					<FormSettings
@@ -37,10 +37,10 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 						setProjectData={setProjectData}
 					/>
 				);
-				break;
+
 			case 4:
 				return <FormMembers team={project.team} setProjectData={setProjectData} />;
-				break;
+
 			default:
 				return <>Oops something went wrong with your request</>;
 		}

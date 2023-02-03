@@ -29,7 +29,7 @@ const FormName = ({ name, type, description, onChange }: FormProps) => {
 				<textarea
 					onChange={onChange}
 					value={description}
-					className="border shadow-md text-center rounded-lg p-2"
+					className="border shadow-md text-center rounded-lg p-2 max-h-32 md:max-h-40"
 					name="description"
 					cols={30}
 					rows={4}></textarea>
