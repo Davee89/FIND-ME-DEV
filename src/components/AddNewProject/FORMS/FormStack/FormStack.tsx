@@ -20,7 +20,7 @@ const FormStack = ({ language, framework, version, onChange }: StackProps) => {
 			<SelectedInput
 				onChange={onChange}
 				value={framework}
-				name="framewrok"
+				name="framework"
 				label="Framework"
 				options={["-------", "React", "Angular", "Vue"]}
 			/>

@@ -15,7 +15,7 @@ export interface Project {
 	type: string;
 	description: string;
 	language: string;
-	framewrok: string;
+	framework: string;
 	version: string;
 	date: Date | null;
 	hours: number;
@@ -31,7 +31,7 @@ const Modal = () => {
 		type: "",
 		description: "",
 		language: "",
-		framewrok: "",
+		framework: "",
 		version: "",
 		date: new Date(),
 		hours: 0,

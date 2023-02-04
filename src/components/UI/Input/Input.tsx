@@ -23,6 +23,7 @@ const Input = ({ name, type, value, label, classname, min, max, onChange }: inpu
 				min={min}
 				max={max}
 				onChange={onChange}
+				required
 			/>
 		</div>
 	);

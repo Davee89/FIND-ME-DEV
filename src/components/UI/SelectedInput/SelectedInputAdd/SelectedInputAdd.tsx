@@ -19,7 +19,8 @@ const SelectedInputAdd = ({ options, label, classname, button, name, onChange, o
 				<select
 					onChange={onChange}
 					className={` ${classname} shadow-md text-center border rounded-lg p-2 w-52 md:w-[365px] `}
-					name={name}>
+					name={name}
+					required>
 					{options.map((option, i) => (
 						<option key={i} value={option}>
 							{option}

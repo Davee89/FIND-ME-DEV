@@ -21,7 +21,7 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 				return (
 					<FormStack
 						language={project.language}
-						framework={project.framewrok}
+						framework={project.framework}
 						version={project.version}
 						onChange={onChange}
 					/>
