@@ -8,6 +8,7 @@ module.exports = {
 				add: "url('/public/add.png')",
 				addHoover: "url('/public/add-hoover.png')",
 				remove: "url('/public/remove.png')",
+				header: "url('/public/header.png')",
 			},
 			keyframes: {
 				vibrate: {
