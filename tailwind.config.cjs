@@ -9,6 +9,8 @@ module.exports = {
 				addHoover: "url('/public/add-hoover.png')",
 				remove: "url('/public/remove.png')",
 				header: "url('/public/header.png')",
+				home: "url('/public/background-home.png')",
+				newlogo: "url('/public/logo.svg')",
 			},
 			keyframes: {
 				vibrate: {
