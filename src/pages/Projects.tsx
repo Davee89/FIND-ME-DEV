@@ -1,6 +1,6 @@
-import FilterBar from "../components/AddNewProject/Projects/FilterBar/FilterBar";
-import Navbar from "../components/AddNewProject/Projects/Navbar/Navbar";
-import ProjectsList from "../components/AddNewProject/Projects/ProjectsList/ProjectsList";
+import FilterBar from "../components/Projects/FilterBar/FilterBar";
+import Navbar from "../components/Projects/Navbar/Navbar";
+import ProjectsList from "../components/Projects/ProjectsList/ProjectsList";
 
 type Props = {};
 
