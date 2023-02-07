@@ -24,6 +24,7 @@ module.exports = {
 			},
 			animation: {
 				vibrate: "vibrate 0.4s linear infinite both",
+				"pulse-slow": "pulse 3s linear infinite",
 			},
 		},
 	},

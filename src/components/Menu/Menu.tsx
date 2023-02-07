@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type Props = {};
 
-const Navbar = (props: Props) => {
+const Menu = (props: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const closeMenu = () => setIsOpen(false);
 	return (
@@ -16,21 +16,21 @@ const Navbar = (props: Props) => {
 						? "absolute flex-col top-28 left-0 items-center w-screen bg-white bg-opacity-50 h-[60%] justify-center gap-10 z-20   "
 						: "hidden md:flex"
 				}`}>
-				<NavLink to="/about-us" className="p-2 uppercase list-none" onClick={closeMenu}>
+				<NavLink to="/about-us" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
 					About us
 				</NavLink>
-				<NavLink to="/projects" className="p-2 uppercase list-none" onClick={closeMenu}>
+				<NavLink to="/projects" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
 					Projects
 				</NavLink>
-				<NavLink to="/" className="p-2 uppercase list-none" onClick={closeMenu}>
+				<NavLink to="/" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
 					Login/Sign Up
 				</NavLink>
 				<Link to="/add-new-project" onClick={closeMenu}>
-					<button className="uppercase">Add new Project</button>
+					<button className="uppercase animate-pulse-slow">Add new Project</button>
 				</Link>
 			</div>
 		</div>
 	);
 };
 
-export default Navbar;
+export default Menu;

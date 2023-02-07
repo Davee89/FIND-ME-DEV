@@ -15,9 +15,7 @@ function App() {
 			</Route>,
 		),
 	);
-	{
-		/* <div className="bg-slate-500 h-screen"></div> */
-	}
+
 	return (
 		<div className="h-screen bg-home">
 			<RouterProvider router={router} />
