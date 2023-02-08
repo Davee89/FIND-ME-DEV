@@ -13,12 +13,9 @@ const Menu = (props: Props) => {
 			<div
 				className={`md:justify-between items-center md:gap-10 text-white font-semibold flex ${
 					isOpen
-						? "absolute flex-col top-28 left-0 items-center w-screen bg-white bg-opacity-50 h-[60%] justify-center gap-10 z-20   "
+						? "fixed flex-col top-28 left-0 items-center w-screen bg-white bg-opacity-50 h-[60%] justify-center gap-10 z-30 backdrop-blur-md text-red-400"
 						: "hidden md:flex"
 				}`}>
-				<NavLink to="/about-us" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
-					About us
-				</NavLink>
 				<NavLink to="/projects" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
 					Projects
 				</NavLink>

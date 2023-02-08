@@ -43,4 +43,32 @@ export const dataBase: Project[] = [
 		level: "Senior",
 		team: [{ name: "frontend dev" }, { name: "frontend dev" }, { name: "frontend dev" }],
 	},
+	{
+		id: 4,
+		name: "Facebook",
+		type: "Frontend",
+		description:
+			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
+		language: "Javascript",
+		framework: "React",
+		version: "Github",
+		date: new Date(),
+		hours: 10,
+		level: "Beginner",
+		team: [{ name: "frontend dev" }, { name: "frontend dev" }],
+	},
+	{
+		id: 5,
+		name: "Facebook",
+		type: "Frontend",
+		description:
+			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
+		language: "Javascript",
+		framework: "React",
+		version: "Github",
+		date: new Date(),
+		hours: 10,
+		level: "Beginner",
+		team: [{ name: "frontend dev" }, { name: "frontend dev" }],
+	},
 ];

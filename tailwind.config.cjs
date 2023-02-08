@@ -11,6 +11,7 @@ module.exports = {
 				header: "url('/public/header.png')",
 				home: "url('/public/background-home.png')",
 				newlogo: "url('/public/logo.svg')",
+				right: "url('/public/arrow-right.png')",
 			},
 			keyframes: {
 				vibrate: {

@@ -5,11 +5,15 @@ type Props = {
 	to: string;
 	name: string;
 	amount?: number;
+	hideSideBar: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
-const NavBarLink = ({ to, src, name, amount = 1 }: Props) => {
+const NavBarLink = ({ to, src, name, amount = 1, hideSideBar }: Props) => {
 	return (
-		<NavLink to={to} className="border p-1 w-[100%] rounded-full uppercase text-white flex justify-between px-6">
+		<NavLink
+			onClick={hideSideBar}
+			to={to}
+			className="shadow-lg border border-red-300 p-1 w-[100%] rounded-full uppercase text-white flex justify-between px-6">
 			<div>
 				<img src={src} />
 				<p className="p-2">{name}</p>
