@@ -7,6 +7,8 @@ type Props = {};
 const Menu = (props: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const closeMenu = () => setIsOpen(false);
+	const activeClassName = { textDecoration: "underline" };
+
 	return (
 		<div className="p-4 flex items-center gap-10">
 			<Hamburger isOpen={isOpen} onClick={setIsOpen} />
@@ -16,7 +18,11 @@ const Menu = (props: Props) => {
 						? "fixed flex-col top-28 left-0 items-center w-screen bg-white bg-opacity-50 h-[60%] justify-center gap-10 z-30 backdrop-blur-md text-red-400"
 						: "hidden md:flex"
 				}`}>
-				<NavLink to="/projects" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
+				<NavLink
+					style={({ isActive }) => (isActive ? activeClassName : undefined)}
+					to="/projects"
+					className="p-2 uppercase list-none hover:animate-vibrate"
+					onClick={closeMenu}>
 					Projects
 				</NavLink>
 				<NavLink to="/" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>

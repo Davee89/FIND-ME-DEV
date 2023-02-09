@@ -15,28 +15,15 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 	const displayPage = (page: number): JSX.Element => {
 		switch (page) {
 			case 1:
-				return <FormName name={project.name} type={project.type} description={project.description} onChange={onChange} />;
+				return <FormName name={project.name} description={project.description} onChange={onChange} />;
 
 			case 2:
 				return (
-					<FormStack
-						language={project.language}
-						framework={project.framework}
-						version={project.version}
-						onChange={onChange}
-					/>
+					<FormStack framework={project.framework} onChange={onChange} date={project.date} setProjectData={setProjectData} />
 				);
 
 			case 3:
-				return (
-					<FormSettings
-						date={project.date}
-						hours={project.hours}
-						level={project.level}
-						onChange={onChange}
-						setProjectData={setProjectData}
-					/>
-				);
+				return <FormSettings level={project.level} onChange={onChange} />;
 
 			case 4:
 				return <FormMembers team={project.team} setProjectData={setProjectData} />;

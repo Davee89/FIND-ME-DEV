@@ -12,13 +12,9 @@ export interface Member {
 export interface Project {
 	id: number;
 	name: string;
-	type: string;
 	description: string;
-	language: string;
 	framework: string;
-	version: string;
 	date: Date | null;
-	hours: number;
 	level: string;
 	team: Member[];
 }
@@ -28,13 +24,9 @@ const Modal = () => {
 	const [projectData, setProjectData] = useState<Project>({
 		id: 0,
 		name: "",
-		type: "",
 		description: "",
-		language: "",
 		framework: "",
-		version: "",
 		date: new Date(),
-		hours: 0,
 		level: "",
 		team: [],
 	});

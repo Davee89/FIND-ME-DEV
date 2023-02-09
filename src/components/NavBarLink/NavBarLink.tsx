@@ -9,8 +9,10 @@ type Props = {
 };
 
 const NavBarLink = ({ to, src, name, amount = 1, hideSideBar }: Props) => {
+	const activeClassName = { backgroundColor: "#FCA5A5" };
 	return (
 		<NavLink
+			style={({ isActive }) => (isActive ? activeClassName : undefined)}
 			onClick={hideSideBar}
 			to={to}
 			className="shadow-lg border border-red-300 p-1 w-[100%] rounded-full uppercase text-white flex justify-between px-6">

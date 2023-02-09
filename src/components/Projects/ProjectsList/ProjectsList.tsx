@@ -50,12 +50,13 @@ const ProjectsList = () => {
 				marginPagesDisplayed={2}
 				pageRangeDisplayed={2}
 				onPageChange={handlePageClick}
-				containerClassName={"pagination"}
 				activeLinkClassName={"text-white bg-rose-400"}
 				className={`flex gap-2 p-4 justify-center font-semibold rounded-full items-center `}
 				pageLinkClassName={`py-2 px-4 rounded-lg bg-white`}
-				previousLinkClassName={`px-4 rounded-lg bg-white bg-right bg-cover scale-x-[-1] text-3xl text-transparent`}
-				nextLinkClassName={`px-4 rounded-lg bg-white bg-right bg-cover text-3xl text-transparent`}
+				previousLinkClassName={`px-4 text-transparent`}
+				previousClassName={`rounded-lg bg-right bg-cover scale-x-[-1]`}
+				nextLinkClassName={`px-4 text-transparent`}
+				nextClassName={`rounded-lg bg-right bg-cover`}
 			/>
 		</div>
 	);

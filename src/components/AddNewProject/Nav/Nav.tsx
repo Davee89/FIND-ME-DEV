@@ -10,7 +10,7 @@ type NavProps = {
 };
 
 const Nav = ({ page, setPage, projectData }: NavProps) => {
-	const { date, description, framework, hours, language, level, name, team, type, version } = projectData;
+	const { date, description, framework, level, name, team } = projectData;
 
 	const [isFullfilled, setIsFullfilled] = useState<string | boolean | 0 | null>(true);
 	const [isClicked, setIsClicked] = useState(false);
@@ -22,11 +22,11 @@ const Nav = ({ page, setPage, projectData }: NavProps) => {
 	const checkIfFullfilled = () => {
 		switch (page) {
 			case 1:
-				return name.trim() && type.trim() && description.trim();
+				return name.trim() && description.trim();
 			case 2:
-				return language.trim() && framework.trim() && version.trim();
+				return date && framework.trim();
 			case 3:
-				return date && hours && level.trim();
+				return level.trim();
 			case 4:
 				return team.length !== 0;
 			default:
