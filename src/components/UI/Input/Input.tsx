@@ -12,7 +12,7 @@ type inputProps = {
 const Input = ({ name, type, value, label, classname, min, max, onChange }: inputProps) => {
 	return (
 		<div className="mb-6 flex flex-col ">
-			<label className="text-center mb-2" htmlFor={name}>
+			<label className="text-center mb-2 text-gray-400 uppercase tracking-[2px]" htmlFor={name}>
 				{label}
 			</label>
 			<input

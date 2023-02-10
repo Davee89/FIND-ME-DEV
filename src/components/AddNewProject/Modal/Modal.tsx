@@ -33,6 +33,7 @@ const Modal = () => {
 
 	const projectFormHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
+		console.log(value);
 		setProjectData(prevData => ({
 			...prevData,
 			[name]: value,

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import RadioInput from "../../../UI/RadioInput/RadioInput";
 import SelectedInput from "../../../UI/SelectedInput/SelectedInput";
 import { Project } from "../../Modal/Modal";
 
@@ -10,18 +11,34 @@ type SettingsProps = {
 const FormSettings = ({ level, onChange }: SettingsProps) => {
 	return (
 		<form>
-			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-8">Set main settings</h2>
-			<div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:items-start md:mb-8">
-				<div className="flex flex-col items-center gap-2 "></div>
+			<h2 className="uppercase tracking-[10px] text-center text-gray-400 mb-8">Choose project level</h2>
+
+			<div className="flex flex-col gap-4 h-[300px] justify-center">
+				<RadioInput
+					src="/public/junior.png"
+					id="junior"
+					name="level"
+					classname="w-[300px] md:w-[500px]"
+					onChange={onChange}
+					value={level}
+				/>
+				<RadioInput
+					src="/public/mid.png"
+					id="mid"
+					name="level"
+					classname="w-[300px] md:w-[500px]"
+					onChange={onChange}
+					value={level}
+				/>
+				<RadioInput
+					src="/public/senior.png"
+					id="senior"
+					name="level"
+					classname="w-[300px] md:w-[500px] "
+					onChange={onChange}
+					value={level}
+				/>
 			</div>
-			<SelectedInput
-				onChange={onChange}
-				value={level}
-				name="level"
-				classname={`w-40 md:w-auto self-center md:self-auto `}
-				label="Project level"
-				options={["------", "Junior", "Mid", "Senior"]}
-			/>
 		</form>
 	);
 };

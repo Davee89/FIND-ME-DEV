@@ -11,7 +11,7 @@ type MembersProps = {
 const FormMembers = ({ team, setProjectData }: MembersProps) => {
 	const [newMember, setNewMember] = useState<Member>({
 		name: "Frontend Dev",
-		amount: null,
+		amount: 1,
 	});
 
 	const addMember = (e: React.MouseEvent<HTMLElement>) => {
@@ -26,7 +26,7 @@ const FormMembers = ({ team, setProjectData }: MembersProps) => {
 			else {
 				const updatedMember = {
 					...alreadyPickedMember,
-					amount: alreadyPickedMember.amount ? alreadyPickedMember.amount + 1 : (alreadyPickedMember.amount = 1),
+					amount: alreadyPickedMember.amount ? alreadyPickedMember.amount + 1 : alreadyPickedMember.amount,
 				};
 				const updatedTeam = team.map(member => {
 					if (member.name === newMember.name) return updatedMember;
@@ -49,7 +49,7 @@ const FormMembers = ({ team, setProjectData }: MembersProps) => {
 						if (member.name === role) {
 							return {
 								...member,
-								amount: member.amount ? member.amount - 1 : member.amount,
+								amount: member.amount ? member.amount - 1 : (member.amount = 0),
 							};
 						}
 						return member;
@@ -64,7 +64,7 @@ const FormMembers = ({ team, setProjectData }: MembersProps) => {
 	};
 
 	const setMemberToAdd = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		setNewMember({ name: e.target.value });
+		setNewMember({ ...newMember, name: e.target.value });
 	};
 
 	return (

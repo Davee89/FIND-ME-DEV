@@ -2,6 +2,7 @@ import Button from "../../UI/Button/Button";
 import { Project } from "../Modal/Modal";
 import { dataBase } from "../../../assets/data";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 type NavProps = {
 	page: number;
@@ -12,8 +13,9 @@ type NavProps = {
 const Nav = ({ page, setPage, projectData }: NavProps) => {
 	const { date, description, framework, level, name, team } = projectData;
 
-	const [isFullfilled, setIsFullfilled] = useState<string | boolean | 0 | null>(true);
+	const [isFullfilled, setIsFullfilled] = useState<string | boolean | Date | null>(true);
 	const [isClicked, setIsClicked] = useState(false);
+	const navigate = useNavigate();
 
 	const goBackHandler = () => {
 		page !== 1 ? setPage(p => p - 1) : setPage(page);
@@ -25,6 +27,7 @@ const Nav = ({ page, setPage, projectData }: NavProps) => {
 				return name.trim() && description.trim();
 			case 2:
 				return date && framework.trim();
+
 			case 3:
 				return level.trim();
 			case 4:
@@ -55,6 +58,7 @@ const Nav = ({ page, setPage, projectData }: NavProps) => {
 	const addNewProject = () => {
 		dataBase.push(projectData);
 		console.log(dataBase);
+		navigate(-1);
 	};
 
 	return (
