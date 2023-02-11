@@ -24,6 +24,31 @@ const ProjectsList = () => {
 	});
 
 	useEffect(() => {
+		const handleResize = () => {
+			const currentWindowWidth = window.innerWidth;
+			let pageAmount = 6;
+
+			if (currentWindowWidth < 870) {
+				pageAmount = 2;
+			} else if (currentWindowWidth < 1370) {
+				pageAmount = 4;
+			}
+
+			setPagination(prevState => ({
+				...prevState,
+				numberPerPage: pageAmount,
+			}));
+		};
+
+		handleResize();
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	useEffect(() => {
 		const pageCount = Math.ceil(pagination.data.length / pagination.numberPerPage);
 		const currentData = pagination.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage);
 

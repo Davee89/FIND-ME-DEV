@@ -15,7 +15,7 @@ const NavBarLink = ({ to, src, name, amount = 1, hideSideBar }: Props) => {
 			style={({ isActive }) => (isActive ? activeClassName : undefined)}
 			onClick={hideSideBar}
 			to={to}
-			className="shadow-lg border border-red-300 p-1 w-[100%] rounded-full uppercase text-white flex justify-between px-6">
+			className="shadow-lg border hover:bg-red-300 border-red-300 p-1 w-[100%] rounded-full uppercase text-white flex justify-between px-6">
 			<div>
 				<img src={src} />
 				<p className="p-2">{name}</p>

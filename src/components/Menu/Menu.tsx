@@ -15,8 +15,8 @@ const Menu = (props: Props) => {
 			<div
 				className={`md:justify-between items-center md:gap-10 text-white font-semibold flex ${
 					isOpen
-						? "fixed flex-col top-28 left-0 items-center w-screen bg-white bg-opacity-50 h-[60%] justify-center gap-10 z-30 backdrop-blur-md text-red-400"
-						: "hidden md:flex"
+						? "fixed flex-col top-0 left-0 items-center w-screen bg-black bg-opacity-60 h-[100%] justify-center gap-10 z-30 backdrop-blur-md text-red-400 transition-all"
+						: "fixed flex-col w-screen top-0 left-0 translate-x-[-200%] md:flex md:static md:translate-x-0 md:flex-row md:w-auto"
 				}`}>
 				<NavLink
 					style={({ isActive }) => (isActive ? activeClassName : undefined)}

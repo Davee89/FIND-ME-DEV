@@ -18,7 +18,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 					src="/public/junior.png"
 					id="junior"
 					name="level"
-					classname="w-[300px] md:w-[500px]"
+					classname="w-[250px] md:w-[500px]"
 					onChange={onChange}
 					value={level}
 				/>
@@ -26,7 +26,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 					src="/public/mid.png"
 					id="mid"
 					name="level"
-					classname="w-[300px] md:w-[500px]"
+					classname="w-[250px] md:w-[500px]"
 					onChange={onChange}
 					value={level}
 				/>
@@ -34,7 +34,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 					src="/public/senior.png"
 					id="senior"
 					name="level"
-					classname="w-[300px] md:w-[500px] "
+					classname="w-[250px] md:w-[500px] "
 					onChange={onChange}
 					value={level}
 				/>
