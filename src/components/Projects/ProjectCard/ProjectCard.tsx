@@ -16,7 +16,7 @@ function ProjectCard({ name, date, description, framework, team, level }: Props)
 		<div className="flex flex-col w-[275px] h-[250px]  items-center p-4 shadow-lg hover:bg-rose-300 hover:text-white text-rose-400 rounded-2xl gap-2 bg-white bg-cover cursor-pointer">
 			<div className="flex items-center w-[100%] h-[25%]">
 				<img
-					src={`/public/${framework}.png`}
+					src={`/${framework}.png`}
 					alt={framework}
 					title={framework.replace(framework[0], framework[0].toUpperCase())}
 					className="w-[48px] h-[48px]"
@@ -41,7 +41,7 @@ function ProjectCard({ name, date, description, framework, team, level }: Props)
 				</div>
 				<div className="flex w-[100%] justify-end overflow-hidden">
 					{team.map((member, i) => (
-						<img key={i} className="w-[32px] h-[32px] mr-[-5px]" src={`/public/${member.name.toLowerCase()}.png`} />
+						<img key={i} className="w-[32px] h-[32px] mr-[-5px]" src={`/${member.name.toLowerCase()}.png`} />
 					))}
 				</div>
 			</div>

@@ -1,4 +1,3 @@
-import SelectedInput from "../../../UI/SelectedInput/SelectedInput";
 import DatePicker from "react-date-picker";
 import { useEffect, useState } from "react";
 import { Project } from "../../Modal/Modal";
@@ -40,20 +39,13 @@ const FormStack = ({ framework, onChange, date, setProjectData }: StackProps) =>
 			</div>
 			<fieldset className="border rounded-2xl shadow-lg p-4 flex flex-wrap gap-5 justify-around">
 				<legend className="text-center tracking-[2px] text-gray-400 uppercase">Pick framework</legend>
-				<RadioInput src="/public/react.png" id="react" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/angular.png" id="angular" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/vue.png" id="vue" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/ember.png" id="ember" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/svelte.png" id="svelte" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/mithrill.png" id="mithrill" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/react.png" id="react" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/angular.png" id="angular" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/vue.png" id="vue" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/ember.png" id="ember" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/svelte.png" id="svelte" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/mithrill.png" id="mithrill" name="framework" onChange={onChange} value={framework} />
 			</fieldset>
-			{/* <SelectedInput
-				onChange={onChange}
-				value={framework}
-				name="framework"
-				label="Framework"
-				options={["-------", "React", "Angular", "Vue"]}
-			/> */}
 		</form>
 	);
 };
