@@ -4,13 +4,14 @@ import Sidebar from "../Sidebar/Sidebar";
 import InputArea from "../InputArea/InputArea";
 import Nav from "../Nav/Nav";
 import { useState } from "react";
+import { v4 as generateID } from "uuid";
 
 export interface Member {
 	name: string;
 	amount?: number | null;
 }
 export interface Project {
-	id: number;
+	id: string | number;
 	name: string;
 	description: string;
 	framework: string;
@@ -22,7 +23,7 @@ export interface Project {
 const Modal = () => {
 	const [pageNumber, setPageNumber] = useState<number>(1);
 	const [projectData, setProjectData] = useState<Project>({
-		id: 0,
+		id: generateID(),
 		name: "",
 		description: "",
 		framework: "",

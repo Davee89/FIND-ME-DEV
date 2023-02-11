@@ -42,8 +42,8 @@ const FormStack = ({ framework, onChange, date, setProjectData }: StackProps) =>
 				<legend className="text-center tracking-[2px] text-gray-400 uppercase">Pick framework</legend>
 				<RadioInput src="/public/react.png" id="react" name="framework" onChange={onChange} value={framework} />
 				<RadioInput src="/public/angular.png" id="angular" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/vue.svg" id="vue" name="framework" onChange={onChange} value={framework} />
-				<RadioInput src="/public/ember.svg" id="ember" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/public/vue.png" id="vue" name="framework" onChange={onChange} value={framework} />
+				<RadioInput src="/public/ember.png" id="ember" name="framework" onChange={onChange} value={framework} />
 				<RadioInput src="/public/svelte.png" id="svelte" name="framework" onChange={onChange} value={framework} />
 				<RadioInput src="/public/mithrill.png" id="mithrill" name="framework" onChange={onChange} value={framework} />
 			</fieldset>

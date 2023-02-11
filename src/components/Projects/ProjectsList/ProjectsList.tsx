@@ -7,6 +7,8 @@ import { Project } from "../../AddNewProject/Modal/Modal";
 type Props = {};
 
 const ProjectsList = () => {
+	const pageAmount = window.innerWidth < 770 ? 2 : window.innerWidth < 1170 ? 4 : 6;
+
 	const [pagination, setPagination] = useState<{
 		data: Project[];
 		offset: number;
@@ -16,7 +18,7 @@ const ProjectsList = () => {
 	}>({
 		data: dataBase,
 		offset: 0,
-		numberPerPage: 3,
+		numberPerPage: pageAmount,
 		pageCount: 0,
 		currentData: [],
 	});
@@ -38,8 +40,8 @@ const ProjectsList = () => {
 	};
 
 	return (
-		<div className="md:col-[2/5] md:row-[2/7]">
-			<div className="md:col-[2/5] md:row-[2/7] py-4 flex md:flex-wrap md:flex-row gap-10 md:justify-between flex-col items-center md:w-[100%]">
+		<div className="md:col-[2/5] md:row-[2/7] my-5 flex flex-col gap-5">
+			<div className="md:col-[2/5] md:row-[2/7] flex md:flex-wrap md:flex-row gap-10 gap-x-24 md:justify-start flex-col items-center md:content-start md:w-[100%] md:h-[90%]">
 				{pagination.currentData && pagination.currentData.map(item => <ProjectCard key={item.id} {...item} />)}
 			</div>
 			<ReactPaginate

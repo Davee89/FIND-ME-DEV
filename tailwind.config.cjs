@@ -12,6 +12,7 @@ module.exports = {
 				home: "url('/public/background-home.png')",
 				newlogo: "url('/public/logo.svg')",
 				right: "url('/public/arrow-right.png')",
+				cardbg: "url('/public/cardbg.png')",
 			},
 			keyframes: {
 				vibrate: {

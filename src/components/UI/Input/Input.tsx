@@ -7,9 +7,10 @@ type inputProps = {
 	min?: number;
 	max?: number;
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
+	maxlength?: number;
 };
 
-const Input = ({ name, type, value, label, classname, min, max, onChange }: inputProps) => {
+const Input = ({ name, type, value, label, classname, min, max, onChange, maxlength }: inputProps) => {
 	return (
 		<div className="mb-6 flex flex-col ">
 			<label className="text-center mb-2 text-gray-400 uppercase tracking-[2px]" htmlFor={name}>
@@ -24,6 +25,7 @@ const Input = ({ name, type, value, label, classname, min, max, onChange }: inpu
 				max={max}
 				onChange={onChange}
 				required
+				maxLength={maxlength}
 			/>
 		</div>
 	);

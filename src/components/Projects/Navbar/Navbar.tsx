@@ -23,7 +23,7 @@ const Navbar = (props: Props) => {
 				<NavBarLink hideSideBar={hideSideBar} src="" name="My Profile" to="my-profile" />
 				<NavBarLink hideSideBar={hideSideBar} src="" name="My Projects" to="my-projects" amount={2} />
 				<NavBarLink hideSideBar={hideSideBar} src="" name="All Projects" to="all-projects" amount={5} />
-				<NavBarLink hideSideBar={hideSideBar} src="" name="Messages" to="/" amount={10} />
+				{/* <NavBarLink hideSideBar={hideSideBar} src="" name="Messages" to="/" amount={10} /> */}
 			</div>
 		</>
 	);
