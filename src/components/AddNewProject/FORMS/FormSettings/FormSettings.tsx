@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
 import RadioInput from "../../../UI/RadioInput/RadioInput";
-import SelectedInput from "../../../UI/SelectedInput/SelectedInput";
-import { Project } from "../../Modal/Modal";
 
 type SettingsProps = {
 	level: string;
@@ -15,7 +12,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 
 			<div className="flex flex-col gap-4 h-[300px] justify-center">
 				<RadioInput
-					src={`${process.env.PUBLIC_URL}/junior.png`}
+					src="/junior.png"
 					id="junior"
 					name="level"
 					classname="w-[250px] md:w-[500px]"
@@ -23,7 +20,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 					value={level}
 				/>
 				<RadioInput
-					src="/public/mid.png"
+					src="/mid.png"
 					id="mid"
 					name="level"
 					classname="w-[250px] md:w-[500px]"
@@ -31,7 +28,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 					value={level}
 				/>
 				<RadioInput
-					src="/public/senior.png"
+					src="/senior.png"
 					id="senior"
 					name="level"
 					classname="w-[250px] md:w-[500px] "
