@@ -15,7 +15,7 @@ const FormSettings = ({ level, onChange }: SettingsProps) => {
 
 			<div className="flex flex-col gap-4 h-[300px] justify-center">
 				<RadioInput
-					src="/public/junior.png"
+					src={`${process.env.PUBLIC_URL}/junior.png`}
 					id="junior"
 					name="level"
 					classname="w-[250px] md:w-[500px]"
