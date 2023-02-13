@@ -57,7 +57,7 @@ const Nav = ({ page, setPage, projectData }: NavProps) => {
 
 	const addNewProject = () => {
 		dataBase.push(projectData);
-		navigate(-1);
+		navigate(`/projects/${projectData.id}`);
 	};
 
 	return (

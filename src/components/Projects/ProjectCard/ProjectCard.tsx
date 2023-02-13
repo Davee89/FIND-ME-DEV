@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Member } from "../../AddNewProject/Modal/Modal";
 
 type Props = {
@@ -7,13 +8,16 @@ type Props = {
 	framework: string;
 	team: Member[];
 	level: string;
+	id: string;
 };
 
-function ProjectCard({ name, date, description, framework, team, level }: Props) {
+function ProjectCard({ name, date, description, framework, team, level, id }: Props) {
 	const levelSign = level.replace(level, level[0].toUpperCase());
 
 	return (
-		<div className="flex flex-col w-[275px] h-[250px]  items-center p-4 shadow-lg hover:bg-rose-300 hover:text-white text-rose-400 rounded-2xl gap-2 bg-white bg-cover cursor-pointer">
+		<Link
+			to={`/projects/${id}`}
+			className="flex flex-col w-[275px] h-[250px]  items-center p-4 shadow-lg hover:bg-rose-300 hover:text-white text-rose-400 rounded-2xl gap-2 bg-white bg-cover cursor-pointer">
 			<div className="flex items-center w-[100%] h-[25%]">
 				<img
 					src={`/${framework}.png`}
@@ -45,7 +49,7 @@ function ProjectCard({ name, date, description, framework, team, level }: Props)
 					))}
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
 

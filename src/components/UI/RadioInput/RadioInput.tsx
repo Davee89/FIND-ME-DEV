@@ -19,7 +19,7 @@ const RadioInput = ({ src, id, name, classname, onChange, value }: Props) => {
 				onChange={onChange}
 				checked={value === id}
 			/>
-			<label htmlFor={id} className="opacity-30 visible peer-checked:opacity-100 ">
+			<label htmlFor={id} className="opacity-30 peer-checked:opacity-100 ">
 				<img
 					src={src}
 					alt={id}

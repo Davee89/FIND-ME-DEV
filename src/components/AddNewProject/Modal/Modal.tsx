@@ -11,7 +11,7 @@ export interface Member {
 	amount?: number | null;
 }
 export interface Project {
-	id: string | number;
+	id: string;
 	name: string;
 	description: string;
 	framework: string;

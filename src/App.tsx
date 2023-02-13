@@ -10,6 +10,7 @@ import AllProjects from "./pages/Projects/AllProjects";
 import MyProfile from "./pages/Projects/MyProfile";
 import MyProjects from "./pages/Projects/MyProjects";
 import NotLogged from "./pages/Projects/NotLogged";
+import SingleProject from "./pages/Projects/SingleProject";
 
 function App() {
 	const { isLogged } = useContext(LoggedContext);
@@ -22,6 +23,7 @@ function App() {
 					<Route path="my-profile" element={isLogged ? <MyProfile /> : <NotLogged />} />
 					<Route path="my-projects" element={<MyProjects />} />
 					<Route path="all-projects" element={<AllProjects />} />
+					<Route path=":projectId" element={<SingleProject />} />
 				</Route>
 			</Route>,
 		),

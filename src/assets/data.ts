@@ -6,7 +6,7 @@ export const dataBase: Project[] = [
 		name: "Facebook",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "React",
+		framework: "react",
 		date: new Date(),
 		level: "Beginner",
 		team: [{ name: "frontend dev" }, { name: "frontend dev" }],
@@ -16,7 +16,7 @@ export const dataBase: Project[] = [
 		name: "Instagram",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "Vue",
+		framework: "vue",
 		date: new Date(),
 		level: "Intermediate",
 		team: [{ name: "frontend dev" }, { name: "frontend dev" }, { name: "frontend dev" }],
@@ -26,7 +26,7 @@ export const dataBase: Project[] = [
 		name: "Portfolio",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "Angular",
+		framework: "angular",
 		date: new Date(),
 		level: "Senior",
 		team: [{ name: "frontend dev" }, { name: "backend dev" }, { name: "ui designer" }],
@@ -36,7 +36,7 @@ export const dataBase: Project[] = [
 		name: "Facebook",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "React",
+		framework: "react",
 		date: new Date(),
 		level: "Beginner",
 		team: [{ name: "frontend dev" }, { name: "backend dev" }, { name: "ui designer" }],
@@ -46,7 +46,7 @@ export const dataBase: Project[] = [
 		name: "Facebook",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "React",
+		framework: "react",
 		date: new Date(),
 		level: "Beginner",
 		team: [{ name: "frontend dev" }, { name: "backend dev" }, { name: "ui designer" }],
@@ -56,7 +56,7 @@ export const dataBase: Project[] = [
 		name: "Portfolio",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "Angular",
+		framework: "angular",
 		date: new Date(),
 		level: "Senior",
 		team: [{ name: "frontend dev" }, { name: "backend dev" }, { name: "ui designer" }],
@@ -66,7 +66,7 @@ export const dataBase: Project[] = [
 		name: "Facebook",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "React",
+		framework: "react",
 		date: new Date(),
 		level: "Beginner",
 		team: [{ name: "frontend dev" }, { name: "frontend dev" }],
@@ -76,7 +76,7 @@ export const dataBase: Project[] = [
 		name: "Facebook",
 		description:
 			"This is a project that we want to re-cerate an app that look like facebook page, add some chat, posts, and other stuff similar to original.",
-		framework: "React",
+		framework: "react",
 		date: new Date(),
 		level: "Beginner",
 		team: [{ name: "frontend dev" }, { name: "frontend dev" }],
