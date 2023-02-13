@@ -61,7 +61,7 @@ const Nav = ({ page, setPage, projectData }: NavProps) => {
 	};
 
 	return (
-		<div className="w-[330px] h-[100px] mt-[-60px] bg-white mx-auto rounded-xl flex justify-between items-center p-4 md:p-10 md:mt-0 md:rounded-none md:w-[490px]">
+		<div className="w-[330px] h-[100px] font-manrope mt-[-60px] bg-white mx-auto rounded-xl flex justify-between items-center p-4 md:p-10 md:mt-0 md:rounded-none md:w-[490px]">
 			<Button disabled={page === 1} name="Go Back" onClick={goBackHandler} />
 			{!isFullfilled && isClicked && (
 				<h3 className="text-red-700 text-sm p-4 w-24 md:text-base md:w-32">Fill all the fields first!</h3>

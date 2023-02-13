@@ -34,7 +34,7 @@ const InputArea = ({ page, project, onChange, setProjectData }: inputAreaProps) 
 	};
 
 	return (
-		<div className="w-[330px] h-[500px] p-10  bg-white relative mx-auto top-[-90px] rounded-xl md:top-0 md:rounded-none md:w-[490px]">
+		<div className="w-[330px] h-[500px] p-10 font-manrope bg-white relative mx-auto top-[-90px] rounded-xl md:top-0 md:rounded-none md:w-[490px]">
 			{displayPage(page)}
 		</div>
 	);

@@ -17,7 +17,7 @@ function ProjectCard({ name, date, description, framework, team, level, id }: Pr
 	return (
 		<Link
 			to={`/projects/${id}`}
-			className="flex flex-col w-[275px] h-[250px]  items-center p-4 shadow-lg hover:bg-rose-300 hover:text-white text-rose-400 rounded-2xl gap-2 bg-white bg-cover cursor-pointer">
+			className="flex border-b-[5px] border-opacity-50 border-red-700 font-manrope flex-col w-[275px] h-[250px]  items-center p-4 shadow-lg hover:bg-rose-300 hover:text-white text-black rounded-2xl gap-2 bg-white bg-cover cursor-pointer">
 			<div className="flex items-center w-[100%] h-[25%]">
 				<img
 					src={`/${framework}.png`}

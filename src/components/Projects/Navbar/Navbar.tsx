@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
 				onClick={() => setIsSideBarOpen(!isSideBarOpen)}
 			/>
 			<div
-				className={`md:col-span-1 md:row-span-6 md: md:h-[100%] md:flex md:flex-col md:p-6 md:items-center md:gap-6 md:rounded-3xl ${
+				className={`font-manrope md:col-span-1 md:row-span-6 md: md:h-[100%] md:flex md:flex-col md:p-6 md:items-center md:gap-6 md:rounded-3xl ${
 					isSideBarOpen
 						? "transition-all fixed left-0 top-0 flex flex-col justify-center gap-5 h-screen z-10 w-screen bg-black bg-opacity-50 backdrop-blur-md md:static md:bg-transparent md:w-[100%] md:justify-start md:backdrop-blur-0"
 						: "absolute translate-x-[-200%] transition-all md:static md:translate-x-0"

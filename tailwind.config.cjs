@@ -3,6 +3,10 @@ module.exports = {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				manrope: ['"Manrope"', "sans-serif"],
+			},
+
 			backgroundImage: {
 				logo: "url('/public/background.webp')",
 				add: "url('/public/add.png')",

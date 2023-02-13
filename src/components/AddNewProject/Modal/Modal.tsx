@@ -40,7 +40,6 @@ const Modal = () => {
 			[name]: value,
 		}));
 	};
-	console.log("tutaj sprawdzamy czy sie zmienia data", projectData);
 	return (
 		<div>
 			<Overlay />
