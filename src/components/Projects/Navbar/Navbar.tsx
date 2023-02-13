@@ -11,14 +11,14 @@ const Navbar = (props: Props) => {
 	return (
 		<>
 			<div
-				className="w-20 z-20 h-10 rounded-full border text-right bg-right bg-no-repeat bg-contain fixed left-[-45px] hover:animate-vibrate md:hidden"
+				className="w-20 z-20 h-10 rounded-full border text-right bg-right bg-no-repeat bg-contain fixed left-[-45px] hover:animate-vibrate lg:hidden"
 				onClick={() => setIsSideBarOpen(!isSideBarOpen)}
 			/>
 			<div
-				className={`font-manrope md:col-span-1 md:row-span-6 md: md:h-[100%] md:flex md:flex-col md:p-6 md:items-center md:gap-6 md:rounded-3xl ${
+				className={`font-manrope lg:col-span-1 lg:row-span-6 lg:h-[100%] lg:flex lg:flex-col lg:p-6 lg:items-center lg:gap-6 lg:rounded-3xl ${
 					isSideBarOpen
-						? "transition-all fixed left-0 top-0 flex flex-col justify-center gap-5 h-screen z-10 w-screen bg-black bg-opacity-50 backdrop-blur-md md:static md:bg-transparent md:w-[100%] md:justify-start md:backdrop-blur-0"
-						: "absolute translate-x-[-200%] transition-all md:static md:translate-x-0"
+						? "transition-all fixed left-0 top-0 flex flex-col justify-center gap-5 h-screen z-10 w-screen bg-black bg-opacity-50 backdrop-blur-md lg:static lg:bg-transparent lg:w-[100%] lg:justify-start lg:backdrop-blur-0"
+						: "absolute translate-x-[-200%] transition-all lg:static lg:translate-x-0"
 				}`}>
 				<NavBarLink hideSideBar={hideSideBar} src="" name="My Profile" to="my-profile" />
 				<NavBarLink hideSideBar={hideSideBar} src="" name="My Projects" to="my-projects" amount={2} />

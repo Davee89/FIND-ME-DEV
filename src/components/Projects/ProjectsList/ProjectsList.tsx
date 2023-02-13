@@ -26,7 +26,7 @@ const ProjectsList = () => {
 			const currentWindowWidth = window.innerWidth;
 			let pageAmount = 6;
 
-			if (currentWindowWidth < 870) {
+			if (currentWindowWidth < 1025) {
 				pageAmount = 2;
 			} else if (currentWindowWidth < 1370) {
 				pageAmount = 4;
@@ -63,7 +63,7 @@ const ProjectsList = () => {
 	};
 
 	return (
-		<div className="md:col-[2/5] md:row-[2/7] my-5 flex flex-col gap-5 font-manrope">
+		<div className="md:col-[1/5] lg:col-[2/5] md:row-[2/7] mx-auto lg:mx-0 my-5 flex flex-col gap-5 font-manrope">
 			<div className="md:col-[2/5] md:row-[2/7] flex md:flex-wrap md:flex-row gap-10 gap-x-24 md:justify-start flex-col items-center md:content-start md:w-[100%] md:h-[90%]">
 				{pagination.currentData && pagination.currentData.map(item => <ProjectCard key={item.id} {...item} />)}
 			</div>
