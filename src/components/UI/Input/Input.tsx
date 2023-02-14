@@ -2,7 +2,7 @@ type inputProps = {
   name: string;
   type: string;
   value: string | number;
-  label: string;
+  label?: string;
   classname?: string;
   min?: number;
   max?: number;
@@ -24,7 +24,6 @@ const Input = ({ name, type, value, label, classname, min, max, onChange, maxlen
         min={min}
         max={max}
         onChange={onChange}
-        required
         maxLength={maxlength}
       />
     </div>

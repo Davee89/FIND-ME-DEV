@@ -3,9 +3,15 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import ReactPaginate from 'react-paginate';
 import { useEffect, useState } from 'react';
 import { Project } from '../../AddNewProject/Modal/Modal';
+import { FilterState } from '../../../pages/Projects/AllProjects';
 
-const ProjectsList = () => {
-  const pageAmount = window.innerWidth < 770 ? 2 : window.innerWidth < 1170 ? 4 : 6;
+const ProjectsList = ({ queries: { filter, search } }: { queries: FilterState }) => {
+  const pageAmount = window.innerWidth < 1025 ? 2 : window.innerWidth < 1370 ? 4 : 6;
+
+  const filteredData = dataBase
+    .filter(project => project.name.toLowerCase().includes(search))
+    .filter(project => project.framework.includes(filter));
+  // dataBase.filter(project => project.name.includes(search));
 
   const [pagination, setPagination] = useState<{
     data: Project[];
@@ -14,7 +20,7 @@ const ProjectsList = () => {
     pageCount: number;
     currentData: Project[];
   }>({
-    data: dataBase,
+    data: filteredData,
     offset: 0,
     numberPerPage: pageAmount,
     pageCount: 0,
@@ -47,21 +53,22 @@ const ProjectsList = () => {
   }, []);
 
   useEffect(() => {
-    const pageCount = Math.ceil(pagination.data.length / pagination.numberPerPage);
-    const currentData = pagination.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage);
+    const pageCount = Math.ceil(filteredData.length / pagination.numberPerPage);
+    const currentData = filteredData.slice(pagination.offset, pagination.offset + pagination.numberPerPage);
 
     setPagination(prevState => ({
       ...prevState,
       pageCount,
       currentData,
     }));
-  }, [pagination.numberPerPage, pagination.offset]);
+  }, [pagination.numberPerPage, pagination.offset, filter, search]);
 
   const handlePageClick = (selectedItem: { selected: number }) => {
     const offset = selectedItem.selected * pagination.numberPerPage;
     setPagination({ ...pagination, offset });
   };
 
+  console.log(pagination);
   return (
     <div className="md:col-[1/5] lg:col-[2/5] md:row-[2/7] mx-auto lg:mx-0 my-5 flex flex-col gap-5 font-manrope">
       <div className="md:col-[2/5] md:row-[2/7] flex md:flex-wrap md:flex-row gap-10 gap-x-24 md:justify-start flex-col items-center md:content-start md:w-[100%] md:h-[90%]">
