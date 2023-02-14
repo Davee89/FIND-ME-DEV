@@ -3,7 +3,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import ReactPaginate from 'react-paginate';
 import { useEffect, useState } from 'react';
 import { Project } from '../../AddNewProject/Modal/Modal';
-import { FilterState } from '../../../pages/Projects/AllProjects';
+import { FilterState } from '../../../pages/Projects/';
 
 const ProjectsList = ({ queries: { filter, search } }: { queries: FilterState }) => {
   const pageAmount = window.innerWidth < 1025 ? 2 : window.innerWidth < 1370 ? 4 : 6;
@@ -11,7 +11,6 @@ const ProjectsList = ({ queries: { filter, search } }: { queries: FilterState })
   const filteredData = dataBase
     .filter(project => project.name.toLowerCase().includes(search))
     .filter(project => project.framework.includes(filter));
-  // dataBase.filter(project => project.name.includes(search));
 
   const [pagination, setPagination] = useState<{
     data: Project[];
@@ -68,7 +67,6 @@ const ProjectsList = ({ queries: { filter, search } }: { queries: FilterState })
     setPagination({ ...pagination, offset });
   };
 
-  console.log(pagination);
   return (
     <div className="md:col-[1/5] lg:col-[2/5] md:row-[2/7] mx-auto lg:mx-0 my-5 flex flex-col gap-5 font-manrope">
       <div className="md:col-[2/5] md:row-[2/7] flex md:flex-wrap md:flex-row gap-10 gap-x-24 md:justify-start flex-col items-center md:content-start md:w-[100%] md:h-[90%]">
