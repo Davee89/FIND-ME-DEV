@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import Hamburger from '../UI/Hamburger/Hamburger';
 import { useState } from 'react';
+import Toggle from '../UI/Toggle/Toggle';
 
 type Props = {};
 
@@ -10,7 +11,7 @@ const Menu = (props: Props) => {
   const activeClassName = { textDecoration: 'underline' };
 
   return (
-    <div className="p-4 flex items-center gap-10">
+    <div className="p-4 flex items-center gap-10 dark:bg-black">
       <Hamburger isOpen={isOpen} onClick={setIsOpen} />
       <div
         className={`md:justify-between items-center md:gap-10 text-white font-semibold flex ${
@@ -27,12 +28,13 @@ const Menu = (props: Props) => {
         >
           Projects
         </NavLink>
-        <NavLink to="/" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
+        {/* <NavLink to="/" className="p-2 uppercase list-none hover:animate-vibrate" onClick={closeMenu}>
           Login/Sign Up
-        </NavLink>
+        </NavLink> */}
         <Link to="/add-new-project" onClick={closeMenu}>
           <button className="uppercase animate-pulse-slow">Add new Project</button>
         </Link>
+        {/* <Toggle /> */}
       </div>
     </div>
   );

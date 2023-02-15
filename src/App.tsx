@@ -3,6 +3,7 @@ import { createRoutesFromElements, Route } from 'react-router';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Modal from './components/AddNewProject/Modal/Modal';
 import Layout from './components/UI/Layout/Layout';
+import { DarkModeContextProvider } from './context/DarkModeContext';
 import { LoggedContext, LoggedContextProvider } from './context/LoggedContext';
 import HomePage from './pages/HomePage';
 import Projects from './pages/Projects';
@@ -31,9 +32,11 @@ function App() {
 
   return (
     <div className="h-screen bg-cover bg-home">
-      <LoggedContextProvider>
-        <RouterProvider router={router} />
-      </LoggedContextProvider>
+      <DarkModeContextProvider>
+        <LoggedContextProvider>
+          <RouterProvider router={router} />
+        </LoggedContextProvider>
+      </DarkModeContextProvider>
     </div>
   );
 }
